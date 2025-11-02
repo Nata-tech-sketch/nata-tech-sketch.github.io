@@ -6,7 +6,6 @@
     <title>ナターシャ | メンタルコーチ × インフルエンサー</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap');
-
       body {
         font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
         margin: 0;
@@ -15,7 +14,6 @@
         line-height: 1.9;
         scroll-behavior: smooth;
       }
-
       header {
         background: rgba(255, 255, 255, 0.9);
         text-align: center;
@@ -23,19 +21,16 @@
         border-bottom: 2px solid #b3d4c8;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       }
-
       header h1 {
         margin: 0;
         font-size: 2.6em;
         color: #2f6656;
       }
-
       header p {
         margin-top: 10px;
         font-size: 1.2em;
         color: #3a7764;
       }
-
       section {
         max-width: 820px;
         margin: 70px auto;
@@ -44,14 +39,12 @@
         border-radius: 16px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
       }
-
       h2 {
         color: #2f6656;
         border-left: 5px solid #84c1a1;
         padding-left: 12px;
         margin-top: 0;
       }
-
       .profile {
         display: flex;
         flex-direction: column;
@@ -59,7 +52,6 @@
         text-align: center;
         padding: 20px;
       }
-
       .profile img {
         width: 160px;
         height: 160px;
@@ -69,16 +61,14 @@
         border: 3px solid #a8d5b8;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       }
-
       .sns {
         text-align: center;
         margin-top: 25px;
       }
-
       .sns a {
         display: inline-block;
         margin: 8px 10px;
-        padding: 10px 20px;
+        padding: 12px 25px;
         background: #e5f4ed;
         border: 1px solid #a8d5b8;
         border-radius: 25px;
@@ -87,19 +77,15 @@
         text-decoration: none;
         transition: all 0.3s ease;
       }
-
       .sns a:hover {
         background: #84c1a1;
         color: white;
       }
-
-      /* 問い合わせフォーム */
       form {
         display: flex;
         flex-direction: column;
         gap: 15px;
       }
-
       input, textarea {
         font-family: inherit;
         font-size: 1em;
@@ -110,12 +96,10 @@
         outline: none;
         transition: all 0.3s ease;
       }
-
       input:focus, textarea:focus {
         border-color: #2f6656;
         box-shadow: 0 0 5px rgba(47, 102, 86, 0.3);
       }
-
       button {
         background: #84c1a1;
         color: white;
@@ -126,11 +110,9 @@
         font-size: 1.1em;
         transition: background 0.3s;
       }
-
       button:hover {
         background: #2f6656;
       }
-
       footer {
         text-align: center;
         background: rgba(255, 255, 255, 0.8);
@@ -140,18 +122,15 @@
         font-size: 0.9em;
         margin-top: 60px;
       }
-
       .fadein {
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.8s ease, transform 0.8s ease;
       }
-
       .fadein.visible {
         opacity: 1;
         transform: translateY(0);
       }
-
       #thankyou {
         display: none;
         text-align: center;
@@ -164,7 +143,6 @@
       }
     </style>
   </head>
-
   <body>
     <header>
       <h1>過去・現在・未来をつなぐメンタルコーチング</h1>
@@ -195,28 +173,31 @@
       </p>
     </section>
 
+    <section id="sns" class="fadein">
+      <h2>SNSリンク</h2>
+      <div class="sns">
+        <a href="https://www.tiktok.com/@apollo06100" target="_blank">TikTok</a>
+        <a href="https://x.com/nata_sha0610" target="_blank">X（旧Twitter）</a>
+        <a href="https://www.instagram.com/snackbar.apollo/" target="_blank">Instagram</a>
+      </div>
+    </section>
+
     <section id="contact" class="fadein">
       <h2>お問い合わせ</h2>
       <form id="contact-form" action="https://formspree.io/f/xbllkzzq" method="POST">
         <label>お名前</label>
         <input type="text" name="name" required />
-
         <label>メールアドレス</label>
         <input type="email" name="email" required />
-
         <label>お問い合わせ内容</label>
         <textarea name="message" rows="5" required></textarea>
-
         <button type="submit">送信する</button>
       </form>
-
       <div id="thankyou">ありがとうございます！メッセージを受け取りました🌿</div>
     </section>
 
     <footer>
-      <p>
-        <a href="quiz.html" style="color:#2f6656; font-weight:bold;">🎯 クイズに挑戦する</a>
-      </p>
+      <p><a href="quiz.html" style="color:#2f6656;font-weight:bold;">🎯 クイズに挑戦する</a></p>
       <p>&copy; 2025 ナターシャ | Mental Coaching</p>
     </footer>
 
