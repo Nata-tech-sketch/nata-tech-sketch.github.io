@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ナターシャのメンタルコーチングクイズ</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&display=swap');
+      body {
+        font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+        background-color: #f6fbf8;
+        color: #333;
+        margin: 0;
+        line-height: 1.8;
+      }
+      header {
+        background: rgba(255, 255, 255, 0.9);
+        text-align: center;
+        padding: 60px 20px;
+        border-bottom: 2px solid #b3d4c8;
+      }
+      h1 {
+        color: #2f6656;
+      }
+      main {
+        max-width: 700px;
+        margin: 40px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+      .question {
+        margin-bottom: 30px;
+      }
+      button {
+        background: #84c1a1;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background 0.3s;
+      }
+      button:hover {
+        background: #2f6656;
+      }
+      #result {
+        text-align: center;
+        font-weight: bold;
+        color: #2f6656;
+        margin-top: 30px;
+      }
+      footer {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.8);
+        border-top: 2px solid #b3d4c8;
+        color: #2f6656;
+        padding: 20px;
+        font-size: 0.9em;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>ナターシャのメンタルコーチングクイズ</h1>
+      <p>あなたはどれだけナターシャの活動を知っている？</p>
+    </header>
+    <main>
+      <div class="question">
+        <p>① ナターシャは心理学部を卒業している。</p>
+        <input type="radio" name="q1" value="true" /> 正しい  
+        <input type="radio" name="q1" value="false" /> 間違い
+      </div>
+
+      <div class="question">
+        <p>② ナターシャのSNS総フォロワー数は約5万人である。</p>
+        <input type="radio" name="q2" value="true" /> 正しい  
+        <input type="radio" name="q2" value="false" /> 間違い
+      </div>
+
+      <div class="question">
+        <p>③ ナターシャが提供しているサービスは「心理学×コーチング」で過去・現在・未来をつなぐこと。</p>
+        <input type="radio" name="q3" value="true" /> 正しい  
+        <input type="radio" name="q3" value="false" /> 間違い
+      </div>
+
+      <div style="text-align:center;">
+        <button onclick="checkAnswers()">結果を表示</button>
+      </div>
+
+      <div id="result"></div>
+    </main>
+
+    <footer>
+      <p>
+        <a href="index.html" style="color:#2f6656;text-decoration:none;">← トップページに戻る</a>
+      </p>
+      <p>&copy; 2025 ナターシャ | Mental Coaching</p>
+    </footer>
+
+    <script>
+      function checkAnswers() {
+        const answers = { q1: "true", q2: "false", q3: "true" };
+        let score = 0;
+        for (let key in answers) {
+          const userAnswer = document.querySelector(`input[name="${key}"]:checked`);
+          if (userAnswer && userAnswer.value === answers[key]) score++;
+        }
+        const result = document.getElementById("result");
+        result.innerHTML = `あなたのスコアは <span style="font-size:1.4em;">${score}/3</span> です！<br>
+        ${
+          score === 3
+            ? "すごい！ナターシャの活動を完璧に理解しています✨"
+            : "もう一度トップページを読んでみましょう🌿"
+        }`;
+      }
+    </script>
+  </body>
+</html>
